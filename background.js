@@ -34,6 +34,9 @@ chrome.extension.onMessage.addListener(
 
     function updateIconImage(days) {
         chrome.browserAction.setIcon({ path: "./rank_images/rank_" + days + ".png" });
+        // Comment for modify it later
+        chrome.browserAction.setBadgeBackgroundColor({ color: [1, 50, 67, 255] });
+        chrome.browserAction.setBadgeText({text: "" + days + "" });
     }
   
     if (msg.event == "refresh")
