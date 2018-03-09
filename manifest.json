@@ -1,0 +1,26 @@
+{
+   "background": {
+      "page": "background.html"
+   },
+   "browser_action": {
+      "default_icon": "icon16.png"
+   },
+   "content_scripts": [ {
+      "js": [ "script.js" ],
+      "matches": [ "http://*/*", "https://*/*" ]
+   } ],
+   "description": "Displays the number of days since a given date in the toolbar. Right click icon->Options to change date.",
+   "icons": {
+      "128": "icon128.png",
+      "16": "icon16.png",
+      "48": "icon48.png"
+   },
+   "incognito": "split",
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCLyyxFP3a9Udd3oQ1Zw2QyEA9wKKPsnTA1Do9e4pwkgDxVaxO+V+hRXEEw3Sr9TuJTwvO2PGDXFn5BlCbLkZNKU2x+BqeKONXSB3GGQcUZI90x6MOIyvxN5RCjEuXpHh+l4E8KOC8YpEi862YUebAZiuTMMVjYn0pB9+TkrbIe/wIDAQAB",
+   "manifest_version": 2,
+   "name": "Day Counter",
+   "options_page": "options.html",
+   "permissions": [ "storage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.1"
+}
