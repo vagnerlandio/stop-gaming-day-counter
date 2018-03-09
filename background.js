@@ -31,6 +31,17 @@ chrome.extension.onMessage.addListener(
         var imageData = context.getImageData(0, 0, 19, 19);
         chrome.browserAction.setIcon({ imageData: imageData });
     }
+
+    function updateIconImage(days) {
+        switch (days) {
+            case 1:
+                chrome.browserAction.setIcon({ path: "./rank_images/rank_01.png" });
+                break;
+            case 2:
+                chrome.browserAction.setIcon({ path: "./rank_images/rank_02.png" });
+                break;
+        }
+    }
   
     if (msg.event == "refresh")
 	{
@@ -63,7 +74,8 @@ chrome.extension.onMessage.addListener(
             var secondDate = new Date();
             var diffDays = Math.floor((secondDate.getTime() - firstDate.getTime())/(oneDay));
             var daySize = (Math.abs(diffDays) < 10) ? 14 : (Math.abs(diffDays) < 100) ? 12 : (Math.abs(diffDays) < 1000) ? 10 : (Math.abs(diffDays) < 10000) ? 8 : 7;
-            updateIcon(diffDays, daySize, "days", 8);
+            // updateIcon(diffDays, daySize, "days", 8);
+            updateIconImage(diffDays);
         });
         
         
