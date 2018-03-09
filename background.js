@@ -33,14 +33,7 @@ chrome.extension.onMessage.addListener(
     }
 
     function updateIconImage(days) {
-        switch (days) {
-            case 1:
-                chrome.browserAction.setIcon({ path: "./rank_images/rank_01.png" });
-                break;
-            case 2:
-                chrome.browserAction.setIcon({ path: "./rank_images/rank_02.png" });
-                break;
-        }
+        chrome.browserAction.setIcon({ path: "./rank_images/rank_" + days + ".png" });
     }
   
     if (msg.event == "refresh")
