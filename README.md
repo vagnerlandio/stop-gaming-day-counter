@@ -1,7 +1,7 @@
 # stop-gaming-day-counter
 A Day Counter for Stop Gaming - Google Extension
 
-Accepted the challenge of moving 90 without games as you move up the level.
+Accepted the challenge, 90 days without games as you move up in levels.
 
 # To-do
 - Add stylesheet
