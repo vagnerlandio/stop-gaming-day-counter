@@ -35,10 +35,10 @@ chrome.extension.onMessage.addListener(
     function updateIconImage(days) {
         chrome.browserAction.setIcon({ path: "./rank_images/rank_" + days + ".png" });
         // Comment for modify it later
-        chrome.browserAction.setBadgeBackgroundColor({ color: [1, 50, 67, 255] });
+        chrome.browserAction.setBadgeBackgroundColor({ color: [52, 73, 94, 255] });
         chrome.browserAction.setBadgeText({text: "" + days + "" });
     }
-  
+
     if (msg.event == "refresh")
 	{
         chrome.storage.sync.get('start-date', function (result) {
@@ -48,14 +48,14 @@ chrome.extension.onMessage.addListener(
                 updateIcon("undefined", 7, "", 0);
                 return;
             }
-            
+
             var re = /^(19|20)\d\d[- /.](0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])$/;
             if(!re.test(startDate))
             {
                 updateIcon("format", 7, "error", 8);
                 return;
             }
-            
+
             var splitter = (startDate.indexOf("/") == -1) ? "-" : "/";
             var parts = startDate.split(splitter);
             if(parts.length != 3)
@@ -63,7 +63,7 @@ chrome.extension.onMessage.addListener(
                 updateIcon("format", 7, "error", 8);
                 return;
             }
-            
+
             //calculate elapsed days
             var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
             var firstDate = new Date(parts[0],parts[1]-1,parts[2]);
@@ -73,8 +73,8 @@ chrome.extension.onMessage.addListener(
             // updateIcon(diffDays, daySize, "days", 8);
             updateIconImage(diffDays);
         });
-        
-        
+
+
 	}
     sendResponse({});
   });
