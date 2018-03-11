@@ -1,6 +1,8 @@
 # stop-gaming-day-counter
 A Day Counter for Stop Gaming - Google Extension
 
+Accepted the challenge of moving 90 without games as you move up the level.
+
 # To-do
 - Add stylesheet
 - Add i18n support
