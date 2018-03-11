@@ -81,6 +81,12 @@ chrome.extension.onMessage.addListener(
             var daySize = (Math.abs(diffDays) < 10) ? 14 : (Math.abs(diffDays) < 100) ? 12 : (Math.abs(diffDays) < 1000) ? 10 : (Math.abs(diffDays) < 10000) ? 8 : 7;
             // updateIcon(diffDays, daySize, "days", 8);
             updateIconImage(diffDays);
+
+            //  Save data to storage across their browsers...
+            chrome.storage.sync.set({ "numberDays": diffDays }, function(){
+            //  A data saved callback omg so fancy
+            });
+
         });
 
 
