@@ -3,6 +3,7 @@ A Day Counter for Stop Gaming - Google Extension
 
 # To-do
 - Add stylesheet
+- Add i18n support
 - Popup page for when click the icon.
 
 # Credits
