@@ -13,9 +13,9 @@ Accepted the challenge, 90 days without games as you move up in levels.
 4. In extensions, enable "Developer Mode".
 5. Click on "Load Unpacked Extension" e choose the folder path where you extracted the zip file.
 
-## 2° Method
+~~## 2° Method~~
 
-1. Download crx file and in Google Chrome, move the crx file to "Extension" page.
+~~1. Download crx file and in Google Chrome, move the crx file to "Extension" page.~~
 
 # To-do
 - Add stylesheet
